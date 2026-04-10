@@ -9,10 +9,6 @@ import random
 import statistics
 import math
 
-# ─────────────────────────────────────────────
-#  ALGORITMOS
-# ─────────────────────────────────────────────
-
 def bubble_sort(arr):
     comparacoes = 0
     trocas = 0
@@ -61,9 +57,6 @@ def quick_sort(arr):
     return arr, comparacoes[0], trocas[0]
 
 
-# ─────────────────────────────────────────────
-#  GERACAO DE ARRAYS
-# ─────────────────────────────────────────────
 
 def gerar_melhor_caso(n, algoritmo):
     if algoritmo == "bubble":
@@ -85,9 +78,6 @@ def gerar_pior_caso(n, algoritmo):
         return list(range(n))
 
 
-# ─────────────────────────────────────────────
-#  BENCHMARK
-# ─────────────────────────────────────────────
 
 TAMANHOS   = [100, 500, 1_000, 2_000, 5_000]
 REPETICOES = 10
@@ -150,9 +140,6 @@ def executar_benchmark():
     return resultados
 
 
-# ─────────────────────────────────────────────
-#  COMPLEXIDADE TEORICA
-# ─────────────────────────────────────────────
 
 def complexidade_teorica(n, caso, algoritmo):
     if algoritmo == "Bubble Sort":
@@ -161,9 +148,6 @@ def complexidade_teorica(n, caso, algoritmo):
         return n * (n - 1) / 2 if caso == "Pior Caso" else n * math.log2(n) if n > 1 else 1
 
 
-# ─────────────────────────────────────────────
-#  TABELA DE RESULTADOS
-# ─────────────────────────────────────────────
 
 def imprimir_tabela(resultados):
     print("=" * 95)
@@ -203,10 +187,6 @@ def imprimir_tabela(resultados):
             print(f"  {nome_alg:<13} {nome_caso:<13} {int(teor):>16,} {int(prat):>16,} {razao:>9.4f}x")
     print()
 
-
-# ─────────────────────────────────────────────
-#  MAIN
-# ─────────────────────────────────────────────
 
 if __name__ == "__main__":
     print("=" * 60)
