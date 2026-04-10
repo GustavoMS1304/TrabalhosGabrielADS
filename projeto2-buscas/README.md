@@ -41,21 +41,24 @@ Não há dependências externas.
 
 ## Como executar
 
-Opção A (recomendado): entre na pasta `projeto2-buscas` e execute:
+Opção A (recomendado): a partir da raiz do repositório (`TrabalhosGabrielADS`), entre na pasta `projeto2-buscas` e execute:
 
 ```bash
+cd projeto2-buscas
 py -3.10 src/experimento.py
 ```
 
 Ajuda (mostra os parâmetros e o padrão, por exemplo semente = 0):
 
 ```bash
+cd projeto2-buscas
 py -3.10 src/experimento.py -h
 ```
 
 Opção B: se você já estiver dentro da pasta `projeto2-buscas/src`, execute sem repetir `src/` no caminho:
 
 ```bash
+cd projeto2-buscas/src
 py -3.10 experimento.py
 ```
 
@@ -67,6 +70,7 @@ Parâmetros principais:
 Exemplo rápido (para testar mais rápido):
 
 ```bash
+cd projeto2-buscas
 py -3.10 src/experimento.py --tamanhos 100,500,1000 --repeticoes 30 --semente 0
 ```
 
